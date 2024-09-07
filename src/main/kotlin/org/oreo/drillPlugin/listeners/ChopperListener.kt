@@ -369,7 +369,19 @@ class ChopperListener : Listener {
             Material.STONE_PRESSURE_PLATE,
             Material.POLISHED_BLACKSTONE_PRESSURE_PLATE,
             Material.HEAVY_WEIGHTED_PRESSURE_PLATE,
-            Material.LIGHT_WEIGHTED_PRESSURE_PLATE
+            Material.LIGHT_WEIGHTED_PRESSURE_PLATE,
+
+            Material.SPRUCE_STAIRS,
+            Material.BIRCH_STAIRS,
+            Material.JUNGLE_STAIRS,
+            Material.ACACIA_STAIRS,
+            Material.DARK_OAK_STAIRS,
+            Material.MANGROVE_STAIRS,
+            Material.CHERRY_STAIRS,
+            Material.BAMBOO_STAIRS,
+            Material.CRIMSON_STAIRS,
+            Material.WARPED_STAIRS,
+            Material.BAMBOO_MOSAIC_STAIRS
 
             -> true
 
