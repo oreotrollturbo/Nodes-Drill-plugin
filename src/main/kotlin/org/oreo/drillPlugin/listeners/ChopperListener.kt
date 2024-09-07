@@ -343,7 +343,33 @@ class ChopperListener : Listener {
             Material.BROWN_WALL_BANNER,
             Material.GREEN_WALL_BANNER,
             Material.RED_WALL_BANNER,
-            Material.BLACK_WALL_BANNER
+            Material.BLACK_WALL_BANNER,
+
+            Material.OAK_WOOD,
+            Material.SPRUCE_WOOD,
+            Material.BIRCH_WOOD,
+            Material.JUNGLE_WOOD,
+            Material.ACACIA_WOOD,
+            Material.DARK_OAK_WOOD,
+            Material.MANGROVE_WOOD,
+            Material.CHERRY_WOOD,
+            Material.CRIMSON_HYPHAE,
+            Material.WARPED_HYPHAE,
+
+            Material.SPRUCE_PRESSURE_PLATE,
+            Material.BIRCH_PRESSURE_PLATE,
+            Material.JUNGLE_PRESSURE_PLATE,
+            Material.ACACIA_PRESSURE_PLATE,
+            Material.DARK_OAK_PRESSURE_PLATE,
+            Material.MANGROVE_PRESSURE_PLATE,
+            Material.CHERRY_PRESSURE_PLATE,
+            Material.BAMBOO_PRESSURE_PLATE,
+            Material.CRIMSON_PRESSURE_PLATE,
+            Material.WARPED_PRESSURE_PLATE,
+            Material.STONE_PRESSURE_PLATE,
+            Material.POLISHED_BLACKSTONE_PRESSURE_PLATE,
+            Material.HEAVY_WEIGHTED_PRESSURE_PLATE,
+            Material.LIGHT_WEIGHTED_PRESSURE_PLATE
 
             -> true
 
