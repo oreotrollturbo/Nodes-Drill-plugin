@@ -11,9 +11,11 @@ object ItemManager {
     private var plugin: JavaPlugin? = null
     var drill: ItemStack? = null
     var digger: ItemStack? = null
+    var chopper: ItemStack? = null
 
     private var drillModel: Int? = null
     private var diggerModel: Int? = null
+    private var chopperModel: Int? = null
 
     /**
      * Item initialisation
@@ -22,6 +24,7 @@ object ItemManager {
         plugin = pluginInstance
         drillModel = plugin?.config?.getInt("drill-main-model")
         diggerModel = plugin?.config?.getInt("digger-main-model")
+        chopperModel = plugin?.config?.getInt("chopper-main-model")
         createItems()
     }
 
@@ -31,6 +34,7 @@ object ItemManager {
     private fun createItems() {
         drill = createDrillItem()
         digger = createDiggerItem()
+        chopper = createChopperItem()
     }
 
     /**
@@ -88,6 +92,33 @@ object ItemManager {
         return item
     }
 
+    /**
+     * @return the item
+     * Makes the drill item , gives it the enchantment glow description and lore
+     */
+    fun createChopperItem(): ItemStack {
+        val item = ItemStack(Material.DIAMOND_AXE, 1)
+        val meta = item.itemMeta
+
+        if (meta != null) {
+            meta.setDisplayName("§eChopperr")
+
+            val lore: MutableList<String> = ArrayList()
+            lore.add("§7Chop wood in a 3x3 radius")
+            lore.add("§5\"oreoChoppinator 2000\"")
+            meta.lore = lore
+
+            meta.addEnchant(Enchantment.LUCK, 1, true)
+            meta.addEnchant(Enchantment.SILK_TOUCH, 1, true)
+            meta.addItemFlags(ItemFlag.HIDE_ENCHANTS) //to add the enchant glint but not have it be visible
+
+            meta.setCustomModelData(chopperModel)
+
+            item.setItemMeta(meta)
+        }
+        return item
+    }
+
     public fun isDrill(item:ItemStack) : Boolean{
 
         val drill = ItemManager.drill ?: return false
@@ -132,6 +163,31 @@ object ItemManager {
 
         // Check enchantments
         if (itemMetaInHand.enchants != diggerMeta.enchants) {
+            return false
+        }
+
+        return true
+    }
+
+    public fun isChopper(item:ItemStack) : Boolean{
+
+        val chopper = ItemManager.chopper ?: return false
+
+        val itemMetaInHand = item.itemMeta ?: return false
+        val chopperMeta = chopper.itemMeta ?: return false
+
+        // Check display name
+        if (itemMetaInHand.displayName != chopperMeta.displayName) {
+            return false
+        }
+
+        // Check lore
+        if (itemMetaInHand.lore != chopperMeta.lore) {
+            return false
+        }
+
+        // Check enchantments
+        if (itemMetaInHand.enchants != chopperMeta.enchants) {
             return false
         }
 

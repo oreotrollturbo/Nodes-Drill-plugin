@@ -14,6 +14,11 @@ commands:
     aliases: [drill]
 
   digger:
-    description: Gives a drill to the player
+    description: Gives a digger to the player
     usage: /<command>
     aliases: [ digger ]
+
+  chopper:
+    description: Gives a chopper to the player
+    usage: /<command>
+    aliases: [ chopper ]

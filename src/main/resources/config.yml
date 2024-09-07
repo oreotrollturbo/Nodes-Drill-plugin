@@ -1,3 +1,4 @@
 
 drill-main-model: 10 #The custom model data number for the drill model
 digger-main-model: 10 #The custom model data number for the digger model
+chopper-main-model: 10 #The custom model data number for the chopper model
