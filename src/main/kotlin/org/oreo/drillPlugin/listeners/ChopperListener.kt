@@ -381,7 +381,19 @@ class ChopperListener : Listener {
             Material.BAMBOO_STAIRS,
             Material.CRIMSON_STAIRS,
             Material.WARPED_STAIRS,
-            Material.BAMBOO_MOSAIC_STAIRS
+            Material.BAMBOO_MOSAIC_STAIRS,
+
+            Material.STRIPPED_OAK_WOOD,        // Stripped Oak Wood
+            Material.STRIPPED_SPRUCE_WOOD,     // Stripped Spruce Wood
+            Material.STRIPPED_BIRCH_WOOD,      // Stripped Birch Wood
+            Material.STRIPPED_JUNGLE_WOOD,     // Stripped Jungle Wood
+            Material.STRIPPED_ACACIA_WOOD,     // Stripped Acacia Wood
+            Material.STRIPPED_DARK_OAK_WOOD,   // Stripped Dark Oak Wood
+            Material.STRIPPED_MANGROVE_WOOD,   // Stripped Mangrove Wood
+            Material.STRIPPED_CHERRY_WOOD,     // Stripped Cherry Wood
+            Material.STRIPPED_CRIMSON_HYPHAE,  // Stripped Crimson Hyphae
+            Material.STRIPPED_WARPED_HYPHAE    // Stripped Warped Hyphae
+
 
             -> true
 
