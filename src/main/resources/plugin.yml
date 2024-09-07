@@ -1,0 +1,19 @@
+name: DrillPlugin
+version: '1.0'
+main: org.oreo.drillPlugin.DrillPlugin
+api-version: '1.20'
+
+depend:
+  - nodes
+
+commands:
+
+  drill:
+    description: Gives a drill to the player
+    usage: /<command>
+    aliases: [drill]
+
+  digger:
+    description: Gives a drill to the player
+    usage: /<command>
+    aliases: [ digger ]
