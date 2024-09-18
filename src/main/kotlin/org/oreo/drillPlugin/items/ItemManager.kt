@@ -42,7 +42,7 @@ object ItemManager {
      * Makes the drill item , gives it the enchantment glow description and lore
      */
     fun createDrillItem(): ItemStack {
-        val item = ItemStack(Material.DIAMOND_PICKAXE, 1)
+        val item = ItemStack(Material.NETHERITE_PICKAXE, 1)
         val meta = item.itemMeta
 
         if (meta != null) {
@@ -70,7 +70,7 @@ object ItemManager {
      * Makes the drill item , gives it the enchantment glow description and lore
      */
     fun createDiggerItem(): ItemStack {
-        val item = ItemStack(Material.DIAMOND_SHOVEL, 1)
+        val item = ItemStack(Material.NETHERITE_SHOVEL, 1)
         val meta = item.itemMeta
 
         if (meta != null) {
@@ -97,7 +97,7 @@ object ItemManager {
      * Makes the drill item , gives it the enchantment glow description and lore
      */
     fun createChopperItem(): ItemStack {
-        val item = ItemStack(Material.DIAMOND_AXE, 1)
+        val item = ItemStack(Material.NETHERITE_AXE, 1)
         val meta = item.itemMeta
 
         if (meta != null) {
