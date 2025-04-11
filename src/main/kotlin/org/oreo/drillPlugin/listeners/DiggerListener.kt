@@ -7,14 +7,14 @@ import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.block.BlockBreakEvent
+import org.oreo.drillPlugin.DrillPlugin
 import org.oreo.drillPlugin.items.ItemManager
 import org.oreo.drillPlugin.java.GetNodesInfo
-import phonon.nodes.Nodes
 import phonon.nodes.objects.Town
 import java.util.function.Consumer
 
 
-class DiggerListener : Listener {
+class DiggerListener: Listener {
 
     @EventHandler
     fun onPlayerUseDigger(e: BlockBreakEvent){
@@ -32,7 +32,7 @@ class DiggerListener : Listener {
         }
 
         val block = e.block
-        val town = Nodes.getResident(player)?.town
+        val town = DrillPlugin.nodesInstance!!.getResident(player)?.town
 
         if (town == null){
             e.isCancelled = true
@@ -126,7 +126,7 @@ class DiggerListener : Listener {
 
     private fun wrongTerritory(town: Town, block: Block) : Boolean{
 
-        val territoryID = Nodes.getTerritoryFromBlock(block.x,block.z)?.id
+        val territoryID = DrillPlugin.nodesInstance!!.getTerritoryFromBlock(block.x,block.z)?.id
 
         return !town.territories.contains(territoryID)
     }
