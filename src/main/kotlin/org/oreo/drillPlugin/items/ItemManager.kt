@@ -51,7 +51,7 @@ object ItemManager {
             val lore: MutableList<String> = ArrayList()
             lore.add("§7Make 3x3 holes with ease")
             lore.add("§4WARNING: this item does not drop ores")
-            lore.add("§5\"oreoDrillinator 300\"")
+            lore.add("§5\"oreoDrillinator 3000\"")
             meta.lore = lore
 
             meta.addEnchant(Enchantment.LUCK, 1, true)
@@ -78,7 +78,7 @@ object ItemManager {
 
             val lore: MutableList<String> = ArrayList()
             lore.add("§7Clear out dirt like its nothing")
-            lore.add("§5\"oreoDigatron 800\"")
+            lore.add("§5\"oreoDigatron 8000\"")
             meta.lore = lore
 
             meta.addEnchant(Enchantment.LUCK, 1, true)
@@ -126,11 +126,6 @@ object ItemManager {
         val itemMetaInHand = item.itemMeta ?: return false
         val drillMeta = drill.itemMeta ?: return false
 
-        // Check display name
-        if (itemMetaInHand.displayName != drillMeta.displayName) {
-            return false
-        }
-
         // Check lore
         if (itemMetaInHand.lore != drillMeta.lore) {
             return false
@@ -151,11 +146,6 @@ object ItemManager {
         val itemMetaInHand = item.itemMeta ?: return false
         val diggerMeta = digger.itemMeta ?: return false
 
-        // Check display name
-        if (itemMetaInHand.displayName != diggerMeta.displayName) {
-            return false
-        }
-
         // Check lore
         if (itemMetaInHand.lore != diggerMeta.lore) {
             return false
@@ -175,11 +165,6 @@ object ItemManager {
 
         val itemMetaInHand = item.itemMeta ?: return false
         val chopperMeta = chopper.itemMeta ?: return false
-
-        // Check display name
-        if (itemMetaInHand.displayName != chopperMeta.displayName) {
-            return false
-        }
 
         // Check lore
         if (itemMetaInHand.lore != chopperMeta.lore) {
